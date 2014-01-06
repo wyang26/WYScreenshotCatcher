@@ -19,8 +19,8 @@
 		3978BC4E187ABC18007ACB38 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3978BC4D187ABC18007ACB38 /* XCTest.framework */; };
 		3978BC4F187ABC18007ACB38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3978BC2E187ABC18007ACB38 /* Foundation.framework */; };
 		3978BC50187ABC18007ACB38 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3978BC32187ABC18007ACB38 /* UIKit.framework */; };
-		3978BC58187ABC18007ACB38 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3978BC56187ABC18007ACB38 /* InfoPlist.strings */; };
-		3978BC5A187ABC18007ACB38 /* WYScreenshotCatcherDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3978BC59187ABC18007ACB38 /* WYScreenshotCatcherDemoTests.m */; };
+		3978BC66187ABC75007ACB38 /* WYScreenshotCatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3978BC65187ABC75007ACB38 /* WYScreenshotCatcher.m */; };
+		3978BC68187ABD74007ACB38 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3978BC67187ABD74007ACB38 /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +50,9 @@
 		3978BC46187ABC18007ACB38 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3978BC4C187ABC18007ACB38 /* WYScreenshotCatcherDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYScreenshotCatcherDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3978BC4D187ABC18007ACB38 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		3978BC55187ABC18007ACB38 /* WYScreenshotCatcherDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WYScreenshotCatcherDemoTests-Info.plist"; sourceTree = "<group>"; };
-		3978BC57187ABC18007ACB38 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3978BC59187ABC18007ACB38 /* WYScreenshotCatcherDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYScreenshotCatcherDemoTests.m; sourceTree = "<group>"; };
+		3978BC64187ABC75007ACB38 /* WYScreenshotCatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYScreenshotCatcher.h; sourceTree = "<group>"; };
+		3978BC65187ABC75007ACB38 /* WYScreenshotCatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYScreenshotCatcher.m; sourceTree = "<group>"; };
+		3978BC67187ABD74007ACB38 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3978BC68187ABD74007ACB38 /* AssetsLibrary.framework in Frameworks */,
 				3978BC31187ABC18007ACB38 /* CoreGraphics.framework in Frameworks */,
 				3978BC33187ABC18007ACB38 /* UIKit.framework in Frameworks */,
 				3978BC2F187ABC18007ACB38 /* Foundation.framework in Frameworks */,
@@ -82,8 +83,8 @@
 		3978BC22187ABC18007ACB38 = {
 			isa = PBXGroup;
 			children = (
+				3978BC63187ABC75007ACB38 /* WYScreenshotCatcher */,
 				3978BC34187ABC18007ACB38 /* WYScreenshotCatcherDemo */,
-				3978BC53187ABC18007ACB38 /* WYScreenshotCatcherDemoTests */,
 				3978BC2D187ABC18007ACB38 /* Frameworks */,
 				3978BC2C187ABC18007ACB38 /* Products */,
 			);
@@ -101,6 +102,7 @@
 		3978BC2D187ABC18007ACB38 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3978BC67187ABD74007ACB38 /* AssetsLibrary.framework */,
 				3978BC2E187ABC18007ACB38 /* Foundation.framework */,
 				3978BC30187ABC18007ACB38 /* CoreGraphics.framework */,
 				3978BC32187ABC18007ACB38 /* UIKit.framework */,
@@ -134,22 +136,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3978BC53187ABC18007ACB38 /* WYScreenshotCatcherDemoTests */ = {
+		3978BC63187ABC75007ACB38 /* WYScreenshotCatcher */ = {
 			isa = PBXGroup;
 			children = (
-				3978BC59187ABC18007ACB38 /* WYScreenshotCatcherDemoTests.m */,
-				3978BC54187ABC18007ACB38 /* Supporting Files */,
+				3978BC64187ABC75007ACB38 /* WYScreenshotCatcher.h */,
+				3978BC65187ABC75007ACB38 /* WYScreenshotCatcher.m */,
 			);
-			path = WYScreenshotCatcherDemoTests;
-			sourceTree = "<group>";
-		};
-		3978BC54187ABC18007ACB38 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3978BC55187ABC18007ACB38 /* WYScreenshotCatcherDemoTests-Info.plist */,
-				3978BC56187ABC18007ACB38 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
+			path = WYScreenshotCatcher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,7 +231,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3978BC58187ABC18007ACB38 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3978BC66187ABC75007ACB38 /* WYScreenshotCatcher.m in Sources */,
 				3978BC45187ABC18007ACB38 /* ViewController.m in Sources */,
 				3978BC3F187ABC18007ACB38 /* AppDelegate.m in Sources */,
 				3978BC3B187ABC18007ACB38 /* main.m in Sources */,
@@ -259,7 +252,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3978BC5A187ABC18007ACB38 /* WYScreenshotCatcherDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,14 +280,6 @@
 				3978BC41187ABC18007ACB38 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3978BC56187ABC18007ACB38 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3978BC57187ABC18007ACB38 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -381,6 +365,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WYScreenshotCatcherDemo/WYScreenshotCatcherDemo-Prefix.pch";
 				INFOPLIST_FILE = "WYScreenshotCatcherDemo/WYScreenshotCatcherDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -394,6 +379,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WYScreenshotCatcherDemo/WYScreenshotCatcherDemo-Prefix.pch";
 				INFOPLIST_FILE = "WYScreenshotCatcherDemo/WYScreenshotCatcherDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

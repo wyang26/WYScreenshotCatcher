@@ -17,13 +17,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    [WYScreenshotCatcher sharedCatcher].delegate = self;
 }
 
-- (void)didReceiveMemoryWarning
+- (void)screenshotCatcher:(WYScreenshotCatcher *)catcher didCatchScreenshotImage:(UIImage *)screenshotImage
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.ssImgView.image = screenshotImage;
+}
+
+- (void)screenshotCatcher:(WYScreenshotCatcher *)catcher didFailToCatchScreenshotImageWithError:(NSError *)error
+{
+    NSLog(@"failed with error %@", error);
 }
 
 @end

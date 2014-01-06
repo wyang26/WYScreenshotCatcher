@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WYScreenshotCatcher.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <WYScreenshotCatcherDelegate>
+
+@property (strong, nonatomic) IBOutlet UIImageView *ssImgView;
 
 @end
