@@ -14,8 +14,8 @@ Make your view controller conforms WYScreenshotCatcherDelegate protocol like<br 
 `@interface ViewController : UIViewController <WYScreenshotCatcherDelegate>`<br />
 
 Implement protocol methods<br />
-`- (void)screenshotCatcher:(WYScreenshotCatcher *)catcher didCatchScreenshotImage:(UIImage *)screenshotImage`
-`- (void)screenshotCatcher:(WYScreenshotCatcher *)catcher didFailToCatchScreenshotImageWithError:(NSError *)error`
+`- screenshotCatcher:didCatchScreenshotImage:`<br />
+`- screenshotCatcher:didFailToCatchScreenshotImageWithError:`<br />
 
 License
 =======
